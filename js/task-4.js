@@ -8,8 +8,8 @@ function handleSubmit(event) {
   const elements = event.currentTarget.elements;
 
   const formObject = {
-    email: elements.email.value,
-    password: elements.password.value,
+    email: elements.email.value.trim(),
+    password: elements.password.value.trim(),
   };
 
   if (elements.email.value === "" || elements.password.value === "") {
@@ -17,4 +17,6 @@ function handleSubmit(event) {
   } else {
     console.log(formObject);
   }
+
+  form.reset();
 }
