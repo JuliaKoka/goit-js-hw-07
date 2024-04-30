@@ -35,7 +35,7 @@ images.forEach((image) => {
   newImage.src = image.url;
   newImage.alt = image.alt;
   newImage.classList.add("img-style");
-  newImage.width = 525;
+  newImage.width = 360;
 
   listItem.append(newImage);
 

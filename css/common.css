@@ -15,19 +15,27 @@ body {
 
 /* Task 2 */
 
-ul {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
-
 img {
   display: block;
+  width: 100%;
+  height: auto;
+}
+
+ul {
+  list-style: none;
+  margin: 0 auto;
+  padding: 0;
 }
 
 .gallery {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-  gap: 50px;
+  row-gap: 48px;
+  column-gap: 24px;
+  padding: 100px 156px;
+}
+
+.list-item {
+  width: calc((100% - 48px) / 3);
 }
