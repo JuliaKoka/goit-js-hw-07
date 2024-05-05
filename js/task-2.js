@@ -27,6 +27,8 @@ const images = [
 
 const imageList = document.querySelector(".gallery");
 
+const imgArray = [];
+
 images.forEach((image) => {
   const listItem = document.createElement("li");
   listItem.classList.add("list-item");
@@ -37,7 +39,8 @@ images.forEach((image) => {
   newImage.classList.add("img-style");
   newImage.width = 360;
 
-  listItem.append(newImage);
-
-  imageList.append(listItem);
+  listItem.appendChild(newImage);
+  imgArray.push(listItem);
 });
+
+imageList.append(...imgArray);

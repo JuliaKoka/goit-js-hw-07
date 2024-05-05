@@ -30,6 +30,7 @@ function clickHandler() {
 }
 
 function createBoxes() {
+  const arr = [];
   let size = 30;
   if (amount <= 100) {
     for (let i = 0; i < amount; i++) {
@@ -38,10 +39,11 @@ function createBoxes() {
       newBox.style.height = size + "px";
       newBox.style.width = size + "px";
       newBox.style.backgroundColor = getRandomHexColor();
-      block.appendChild(newBox);
+      arr.push(newBox);
 
       size += 10;
     }
+    block.append(...arr);
   }
 }
 
